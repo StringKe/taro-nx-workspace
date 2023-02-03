@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "version": 2,
+  "cli": "nx",
+  "title": "Build executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "rootDir": {
+      "type": "string",
+      "description": "The root directory of the workspace."
+    },
+    "appDir": {
+      "type": "string",
+      "description": "The directory of the app."
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of the executor.",
+      "enum": [
+        "weapp",
+        "swan",
+        "alipay",
+        "tt",
+        "h5",
+        "rn",
+        "qq",
+        "jd",
+        "quickapp"
+      ],
+      "default": "weapp"
+    },
+    "watch": {
+      "type": "boolean",
+      "description": "Watch for file changes.",
+      "default": false
+    },
+    "env": {
+      "type": "string",
+      "description": "The environment to use.",
+      "default": "production"
+    },
+    "mode": {
+      "type": "string",
+      "description": "The mode to use.",
+      "default": "production"
+    },
+    "port": {
+      "type": "number",
+      "description": "The port to use.",
+      "default": 10086
+    },
+    "platform": {
+      "type": "string",
+      "description": "Specific React-Native build target: android / ios, android is default value",
+      "default": "android"
+    },
+    "resetCache": {
+      "type": "boolean",
+      "description": "Clear transform cache",
+      "default": false
+    },
+    "publicPath": {
+      "type": "string",
+      "description": "Assets public path",
+      "default": ""
+    },
+    "bundleOutput": {
+      "type": "string",
+      "description": "File name where to store the resulting bundle",
+      "default": "index.bundle"
+    },
+    "sourcemapOutput": {
+      "type": "string",
+      "description": "File name where to store the sourcemap file for resulting bundle",
+      "default": "index.map"
+    },
+    "sourcemapUseAbsolutePath": {
+      "type": "boolean",
+      "description": "Report SourceMapURL using its full path",
+      "default": false
+    },
+    "sourcemapSourcesRoot": {
+      "type": "string",
+      "description": "Path to make sourcemaps sources entries relative to",
+      "default": ""
+    },
+    "assetsDest": {
+      "type": "string",
+      "description": "Directory name where to store assets referenced in the bundle",
+      "default": ""
+    },
+    "qr": {
+      "type": "boolean",
+      "description": "Print qrcode of React-Native bundle server",
+      "default": false
+    },
+    "blended": {
+      "type": "boolean",
+      "description": "Blended Taro project in an original MiniApp project",
+      "default": false
+    },
+    "plugin": {
+      "type": "string",
+      "description": "Build Taro plugin project",
+    },
+    "envPrefix": {
+      "type": "string",
+      "description": "Provide the dotEnv varables's prefix",
+      "default": "TARO"
+    }
+  },
+  "required": [
+    "rootDir",
+    "appDir"
+  ]
+}

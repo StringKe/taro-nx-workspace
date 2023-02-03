@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "dev-plugin-nx-taro",
+  "version": "0.0.1",
+  "generators": {
+    "dev-plugin-nx-taro": {
+      "factory": "./src/generators/dev-plugin-nx-taro/generator",
+      "schema": "./src/generators/dev-plugin-nx-taro/schema.json",
+      "description": "dev-plugin-nx-taro generator"
+    }
+  }
+}
